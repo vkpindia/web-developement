@@ -17,18 +17,36 @@ for(let i=0; i<names.length; ++i){
 }
 console.log('________________ForEach()_____________________');
 // Access array elments by using forEach() Method
-names.forEach(element=>{
-    console.log('Name:', element);
-});
+let dupNames = names.forEach(
+    function(element, index){
+     console.log('element', element, index);
+     return element;
+     /* if(index==2){
+        names.push(10); //['Scott', 'Smith', 'John', 'Biden', 10]
+        names.splice(2, 1);//array.splice(index, 1) ['Scott', 'Smith', 'Biden', 10]
+     } */
+    }
+);
 
+console.log('dupNames', dupNames);
+// console.log('names', names);
 console.log('_________________map()____________________');
 // Access array elments by using map() Method
-names.map(element=>{
-    console.log('Name:', element);
-});
+let ages = [12, 26, 56, 18, 7, 10, 11, 20];
+let dupliCateNames = ages.map(element=>element % 2==0
+    /* if(index==2){
+        names.push(10); //['Scott', 'Smith', 'John', 'Biden', 10]
+        names.splice(2, 1);//array.splice(index, 1) ['Scott', 'Smith', 'Biden', 10]
+     } */
+      
+);
+console.log('dupliCateNames', dupliCateNames);
+console.log('ages', ages);
 
+let age = [12, 26, 56, 18, 7, 10, 11, 20];
+age.length = 4;
 console.log('_________________filter()____________________');
 // Access array elments by using filter() Method
-names.filter(element=>{
-    console.log('Name:', element);
-});
+let dupliName = age.filter(ele=>ele % 2==0);
+console.log('dupliName', dupliName);
+console.log('age', age);
