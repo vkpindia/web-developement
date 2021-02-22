@@ -71,16 +71,25 @@ console.log('edu:', obj1.edu); */
 } */
 
 let tableRow = '';
+let card = '';
 studentDetails.data.map((items)=>{
-    tableRow+=`<tr>
+    tableRow = tableRow + `<tr>
       <td>${items.name}</td>
       <td>${items.course}</td>
       <td>${items.profession}</td>
       <td>${items.address}</td>
       <td>${items.edu}</td>
-    </tr>`
+    </tr>`;
+    card = card + `<div>
+      <p>Name: ${items.name}</p>
+      <p>Course: ${items.course}</p>
+      <p>Profession: ${items.profession}</p>
+      <p>Address: ${items.address}</p>
+      <p>Education: ${items.edu}</p>
+    <div>`;
 });
 console.log('tableRow', tableRow);
+document.getElementById('cardContiner').innerHTML = card;
 tableBody.innerHTML = tableRow;
 
 /* let hearEle='';
