@@ -18,7 +18,6 @@
  * Assignment operators used to assign values to variables, Fro example
  * const x = 5;
  * 
- * 
  */
 
 
@@ -60,3 +59,21 @@ console.log('Remainder Assignment:', a); // 1
 
 a **= 2; // a = a**2; 
 console.log('Exponential Assignment:', a);
+
+
+/** 
+ * Arithmetic Operators: Arithmetic operators are used to perform 
+ * Arithmetic calculaions
+ * like const number = 3 + 5;
+ * here , the + operator is used to add two operands 3 and 5.
+ * 
+ * 1. Addition
+ * 2. Subtraction
+ * 3. Multiplication
+ * 4. Division 
+ * 5. Remainder
+ * 6. Increment
+ * 7. Decrement
+ * 8. Exponentiation
+ * 
+*/
