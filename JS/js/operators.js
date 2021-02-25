@@ -77,3 +77,57 @@ console.log('Exponential Assignment:', a);
  * 8. Exponentiation
  * 
 */
+
+/**
+ * Logical Operators: To perform the logical operations and return a boolean 
+ * value, either or false
+ * 
+ * 1. Logical AND (&&)
+ * 2. Logical OR (||)
+ * 3. Logical NOT (!)
+ *  
+ * */ 
+
+ let aBool = true;
+ console.log('a', !aBool);
+
+ let x= true;
+ let y = false;
+
+ console.log('AND', x && y);
+ console.log('AND', y || x);
+
+/** 
+ * Ternary Operator(:?)
+ * 
+ * */
+
+let u = 10, v=20;
+
+let c = u > v ? u : v; // 20
+let d = u < v ? u : v; // 20
+console.log('c', c); // 20
+console.log('d', d);
+
+/** 
+ *  Spread Operator (...)
+ * It expands the array into individual elements. So it can be used to expand
+ * the array in a places where zero or more elements are expected.
+ * */ 
+let arr1 = [1, 2, 3];
+let arr2 = [4, 5, 6];
+let arr3 = [...arr1, ...arr2];
+// let arr3 = arr1.concat(arr2);
+console.log('arr', arr3);
+
+const user1 = {
+    name: 'Jen',
+    age: 22
+}
+const user2 = {
+    name: 'Jen',
+    location: 'Pune'
+}
+
+const mergedUser = {...user1, ...user2} // {name: 'Jen', age: 22, name: 'Jen', location: 'Pune'}
+console.log('mergedUser', mergedUser);
