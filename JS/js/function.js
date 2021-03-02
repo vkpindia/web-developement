@@ -34,7 +34,6 @@ var result = document.getElementById('result');
 
 function calculator(calculationType) {
     let calResult = 0;
-    
     if(calculationType == 'add'){
         calResult = parseInt(number1.value) + parseInt(number2.value);
         if(isNaN(calResult)){
@@ -64,9 +63,40 @@ function calculator(calculationType) {
     number2.value = "";
 }
 
+function returnDemo(number1, number2) {
+    let sum = number1 + number2
+    return sum; 
+}
+
+/* function multiple(x) {
+    function fn(y) {
+        return x*y;
+    }
+    return fn;
+} */
+
+/**
+ *  Function Expression: JavaScript allows us to assign a function to a variable
+ *  then use that variable as a function. It is called Function Expression
+ *  */ 
+let multipleValue = function multiple(x) {
+    function fn(y) {
+        return x*y;
+    }
+    return fn;
+}
+
  // calling a function
 //  hellowWorld();
-showFullname('Angular', 'Talk');
+/* showFullname('Angular', 'Talk');
+showFullname('Steve');
+showFullname();
+let returnValue = returnDemo(10, 20);
+console.log('returnValue:', returnValue); */
+// let multipleValue = multiple(4);
+console.log('multipleValue', multipleValue);
+let finalValue = multipleValue(5);
+console.log('multiple', finalValue);
 
 
 
