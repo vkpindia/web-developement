@@ -86,6 +86,39 @@ let multipleValue = function multiple(x) {
     return fn;
 }
 
+/** 
+ * Anonymous  Function: Javascript allows us to define function without any name.
+ * this unnamed function called anonymous function. Anonymous function must be
+ * assigned in a variable.
+ * */  
+//IIFE
+
+ let anonymousFun = function(){
+     console.log('Anonymous function');
+ }
+ anonymousFun();
+
+//IIFE Syntax
+ (function(a, b){
+    console.log('IIFE', a, b);
+ }(10, 20));
+// let var and cost
+
+function varFun() {
+    var varx = 20;
+    let vary = 30;
+    const varz = 40
+    console.log('varx1', varx);
+}
+
+//javascript block
+{
+    var varx = 20;
+}
+
+console.log('varx', varx);
+
+varFun();
  // calling a function
 //  hellowWorld();
 /* showFullname('Angular', 'Talk');
@@ -97,6 +130,47 @@ console.log('returnValue:', returnValue); */
 console.log('multipleValue', multipleValue);
 let finalValue = multipleValue(5);
 console.log('multiple', finalValue);
+
+
+/**
+ * Nested function: A function is called nested when it is ceated inside another
+ * function. We can use it to organize our code.
+ * 
+ */
+
+
+ function sayHiBye(firstName, lastName) {
+     //nested function helper
+     function getFullName() {
+         return firstName + ' ' + lastName;
+     }
+
+     let fullName = getFullName();
+     console.log('fullName', fullName);
+ }
+
+ // make counter using nested function concept
+ function makeCounter() {
+     let count = 0;
+     return function(){
+        return count++;
+     }
+ }
+
+ // function call
+ sayHiBye('Angular', 'Talk');
+
+ let counter = makeCounter();
+ console.log('counter1', counter()); // 0
+ console.log('counter2', counter()); // 1
+ console.log('counter23', counter()); // 2
+
+ // Callback function
+ // Anonymous function
+ // Nested function 
+ // Closure 
+ // Function scope
+
 
 
 
